@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyFridge</string>
+    <string name="title">My Fridge</string>
+    <string name="menu1">Scan</string>
+    <string name="menu2">Enter Ingredients</string>
+    <string name="menu3">Saved Recipes</string>
+
+</resources>

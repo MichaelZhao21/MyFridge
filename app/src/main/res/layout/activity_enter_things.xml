@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnterThingsActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/menu2"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/ingredients"
+        android:layout_width="395dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/turkey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Turkey"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/chicken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chicken"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/beef"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Beef"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/lettuce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lettuce"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tomato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tomato"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/apple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apple"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/potato"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Potato"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/pasta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pasta"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/rice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rice"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/bread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bread"
+                android:textSize="30sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/cart"
+        android:layout_width="395dp"
+        android:layout_height="290dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="Move Down"
+        app:layout_constraintBottom_toTopOf="@+id/cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredients"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/arrow_down_float" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="Move Up"
+        app:layout_constraintBottom_toTopOf="@+id/cart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredients"
+        app:layout_constraintVertical_bias="0.333"
+        app:srcCompat="@android:drawable/arrow_up_float" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="175dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:text="Search!"
+        app:layout_constraintBottom_toTopOf="@+id/cart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ingredients"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
