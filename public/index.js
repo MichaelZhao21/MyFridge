@@ -16,22 +16,14 @@ app.get('/scan', (req, res) => {
 
 app.get('/food', (req, res) => {
     res.status(200).end();
-    console.log(getFood(req.get("names")));
+    console.log(getFood("chicken,salad,bread"));
+    // console.log(getFood(req.get("names")));
 });
 
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`App listening on port ${PORT}`);
 });
-
-async function detect(picture) { // TODO: FIX
-    const client = new vision.ImageAnnotatorClient();
-
-    const [result] = await client.labelDetection(picture);
-    const labels = result.labelAnnotations;
-    console.log('Labels:');
-    labels.forEach(label => console.log(label.description));
-}
 
 function getFood(foods) {
     const https = require('https')
@@ -57,6 +49,15 @@ function getFood(foods) {
 
     req.end()
 
+}
+
+async function detect(picture) { // TODO: FIX
+    const client = new vision.ImageAnnotatorClient();
+
+    const [result] = await client.labelDetection(picture);
+    const labels = result.labelAnnotations;
+    console.log('Labels:');
+    labels.forEach(label => console.log(label.description));
 }
 
 module.exports = app;
