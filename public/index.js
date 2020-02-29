@@ -16,8 +16,7 @@ app.get('/scan', (req, res) => {
 
 app.get('/food', (req, res) => {
     res.status(200).end();
-    console.log(getFood("chicken,salad,bread"));
-    // console.log(getFood(req.get("names")));
+    res.send(getFood(res.get("names")));
 });
 
 const PORT = process.env.PORT || 8080;
